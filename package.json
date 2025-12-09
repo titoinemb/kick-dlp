@@ -5,9 +5,11 @@
   "scripts": {
     "start": "node ./dist/index.js",
     "test": "jest ./src/tests/__test__.spec.ts",
+    "dev": "ts-node ./src/index.ts",
     "build": "tsc && find ./dist -type f -name '*.js' -exec sh -c 'terser \"$1\" --compress --mangle --output \"${1%.js}.js\"' _ {} \\;",
     "link": "npm link",
-    "unlink": "npm unlink -g kick-dlp"
+    "unlink": "npm unlink -g kick-dlp",
+    "playwright:install": "npx playwright install chromium"
   },
   "bin": {
     "kick-dlp": "./dist/index.js"
@@ -32,7 +34,8 @@
     "jest": "^30.2.0",
     "terser": "^5.44.0",
     "ts-jest": "^29.4.5",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "ts-node": "^10.9.2"
   },
   "dependencies": {
     "playwright": "^1.55.0"
