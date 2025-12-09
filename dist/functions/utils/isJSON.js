@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=e=>{if("string"==typeof e)try{return JSON.parse(e),!0}catch(e){return!1}return!0};
